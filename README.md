@@ -72,13 +72,13 @@ import joblib
 ## Detailed Explanation of the Process
 
 1. **Data Loading and Exploration**: 
-   - The stock price data is imported from a CSV file, structured with various columns (for example, "Date" and "Open"). The first and last few records and additional information about the dataset are printed for quick examination.
+   - The stock price data is imported from a CSV file, structured with various columns (for example, "Date" and "Close"). The first and last few records and additional information about the dataset are printed for quick examination.
 
 2. **Data Splitting**:
    - The dataset length is calculated, and a training-validation split is performed to prepare for training the models. The Date column is converted to datetime objects for temporal analysis.
 
 3. **Feature Scaling**:
-   - The Open price values are reshaped and scaled down to enhance the neural network training process, which benefits from smaller input values. The scaled Open prices are stored for further processing.
+   - The Close price values are reshaped and scaled down to enhance the neural network training process, which benefits from smaller input values. The scaled Close prices are stored for further processing.
 
 4. **Creating Time Series Data**:
    - Both training (X_train, y_train) and testing inputs (X_test, y_test) are prepared using a window of 50 time steps, creating a dataset that reflects past stock prices as features for prediction.
